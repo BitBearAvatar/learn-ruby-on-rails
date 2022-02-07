@@ -1,6 +1,12 @@
 {
   "name": "learn_ruby_on_rails",
   "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards."
+  },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^7.0.1",
