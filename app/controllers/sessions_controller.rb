@@ -14,8 +14,9 @@ class SessionsController < ApplicationController
     end
   end
 
+  # ログイン中の場合のみログアウトする
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
